@@ -10,7 +10,7 @@
  
 ### IoT Hub
 
-ˋˋˋbash
+```js
 
 az iot hub create --resource-group MyResourceGroup --name MyIotHub --sku S1 --location westus --partition-count 4
 az iot hub device-identity create --hub-name MyIotHub --device-id MyPythonDevice  
