@@ -16,8 +16,15 @@ az iot hub device-identity create --hub-name MyIotHub --device-id MyPythonDevice
 az iot hub device-identity show-connection-string --hub-name MyIotHub --device-id MyPythonDevice --output table
 ```bash
 
+1.	Open the IoT Hub
+2. Add consume group <yourname>
 
 ### Function App
+1. Create Function app
+2. new IoT Hub Template
+3. Integrate Setting
+   -- trigger MyIotHub
+   -- output 
 
 ### Event Hub
 
