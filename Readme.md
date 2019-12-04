@@ -11,12 +11,11 @@
 ### IoT Hub
 
 ```bash
-
 az iot hub create --resource-group MyResourceGroup --name MyIotHub --sku S1 --location westus --partition-count 4
 az iot hub device-identity create --hub-name MyIotHub --device-id MyPythonDevice  
 az iot hub device-identity show-connection-string --hub-name MyIotHub --device-id MyPythonDevice --output table
+```bash
 
-ˋˋˋbash
 
 ### Function App
 
