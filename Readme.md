@@ -10,13 +10,11 @@
  
 ### IoT Hub
 
-```bash
-az iot hub create --resource-group MyResourceGroup --name MyIotHub --sku S1 --location westus --partition-count 4
-az iot hub device-identity create --hub-name MyIotHub --device-id MyPythonDevice  
-az iot hub device-identity show-connection-string --hub-name MyIotHub --device-id MyPythonDevice --output table
-```
-1.	Open the IoT Hub
-2. Add consume group <yourname>
+1. Create the IoT Hub  
+2.	Open the IoT Hub  
+3. Add consume group <yourname>  
+4. Create Device  
+4. Get Connection String  
 
 ### Function App
 1. Create Function app
@@ -56,15 +54,15 @@ public static void Run(string myIoTHubMessage,out string outputEventHubMessage, 
 }
 ```
 
-5.	Stream Analytics
-
-
 ### Event Hub
 
+1.	Create a Event Hub  
+2.	Create hub in the Event Hub  
+
 ### Stream Analytics
-1.	Create another Stream Analytics
-2.	Setting input : Event Hub
-3.	Setting Output : Power BI
+1.	Create another Stream Analytics  
+2.	Setting input : Event Hub  
+3.	Setting Output : Power BI  
 4.	Query 
 SELECT
     system.timestamp as time
@@ -75,7 +73,6 @@ into powerbi
 FROM
     eventhub timestamp by EventProcessedUtcTime
 
-
 ### Machine Learning Service Workspace
 1.	Lunch machine learning workspace studio
 2.	Create a Notebook VM compute
@@ -83,3 +80,5 @@ FROM
 4.	Open amlconfiguration.ipynb, run all cell in this jupyter notebook
 5.	Open anomaly detection model.ipynb, run all cells in this jupyter notebook
 6.	Go back to the Azure Machine Service Portal
+
+
